@@ -15,7 +15,9 @@ struct ContentView: View {
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(Color.red)
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+            Button(action: {
+                print ("I was pressed")
+            }) {
                 Text("Hit me!")
             }
         }
