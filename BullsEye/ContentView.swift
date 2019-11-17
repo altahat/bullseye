@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
 
   @State var alertIsVisible: Bool = false
+  @State var sliderValue = 50.0
  
   var body: some View {
     VStack {
@@ -26,7 +27,7 @@ struct ContentView: View {
       // Slider row
       HStack {
         Text("1")
-        Slider(value: /*@START_MENU_TOKEN@*/.constant(10)/*@END_MENU_TOKEN@*/)
+        Slider(value: self.$sliderValue, in: 1...100)
         Text("100")
       }
       Spacer()
