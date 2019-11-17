@@ -14,10 +14,15 @@ struct ContentView: View {
         
     var body: some View {
         VStack {
+            //Target row
             Text("Welcome to UAG")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(Color.red)
+            
+            //Slider row
+            
+            //Button row
             Button(action: {
                 print ("I was pressed")
                 self.alertIsVisible = true
@@ -29,6 +34,8 @@ struct ContentView: View {
                            message: Text("This is my first pop-up."),
                            dismissButton: .default(Text("Awesome!")))
             }
+            
+            //Score row
         }
     }
 }
