@@ -42,6 +42,18 @@ struct ContentView: View {
             }
             
             //Score row
+            HStack {
+              Button(action: {}) {
+                Text("Start Over")
+              }
+              Text("Score:")
+              Text("999999")
+              Text("Round:")
+              Text("999")
+              Button(action: {}) {
+                Text("Info")
+              }
+            }
         }
     }
 }
