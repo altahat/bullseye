@@ -22,6 +22,11 @@ struct ContentView: View {
             }
             
             //Slider row
+            HStack {
+              Text("1")
+              Slider(value: /*@START_MENU_TOKEN@*/.constant(10)/*@END_MENU_TOKEN@*/)
+              Text("100")
+            }
             
             //Button row
             Button(action: {
