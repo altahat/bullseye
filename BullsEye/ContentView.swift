@@ -15,10 +15,11 @@ struct ContentView: View {
     var body: some View {
         VStack {
             //Target row
-            Text("Welcome to UAG")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .foregroundColor(Color.red)
+            HStack {
+                Text("Put the bullseye as close as you can to:")
+                    .font(.largeTitle)
+                Text("100")
+            }
             
             //Slider row
             
