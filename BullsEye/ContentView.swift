@@ -11,9 +11,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State var alertIsVisible = false
-    @State var whosThereIsVisible: Bool = false
-
-    
+        
     var body: some View {
         VStack {
             Text("Welcome to UAG")
@@ -31,22 +29,12 @@ struct ContentView: View {
                            message: Text("This is my first pop-up."),
                            dismissButton: .default(Text("Awesome!")))
             }
-            
-            //Knock knock joke
-            Button(action: {
-              self.whosThereIsVisible = true
-            }) {
-              Text(/*@START_MENU_TOKEN@*/"Knock, Knock!"/*@END_MENU_TOKEN@*/)
-            }
-            .alert(isPresented: $whosThereIsVisible) { () -> Alert in
-              return Alert(title: Text("Who's There?"), message: Text("Little old lady."), dismissButton: .default(Text("Little old lady who?")))
-            }
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().previewLayout(.fixed(width: 896, height: 414))
     }
 }
