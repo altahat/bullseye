@@ -76,6 +76,7 @@ struct ContentView: View {
       }
       .padding(.bottom, 20)
     }
+    .background(Image("Background"), alignment: .center)
   }
   
   func sliderValueRounded() -> Int {
@@ -129,6 +130,7 @@ struct ContentView_Previews: PreviewProvider {
     ContentView().previewLayout(.fixed(width: 896, height: 414))
   }
 }
+
 
 
 
