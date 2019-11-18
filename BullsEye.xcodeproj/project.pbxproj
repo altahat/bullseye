@@ -13,6 +13,7 @@
 		B8E7F04823817DC300081FE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8E7F04723817DC300081FE4 /* Assets.xcassets */; };
 		B8E7F04B23817DC300081FE4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8E7F04A23817DC300081FE4 /* Preview Assets.xcassets */; };
 		B8E7F04E23817DC300081FE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8E7F04C23817DC300081FE4 /* LaunchScreen.storyboard */; };
+		B8E7F056238279BC00081FE4 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E7F055238279BC00081FE4 /* AboutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B8E7F04A23817DC300081FE4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B8E7F04D23817DC300081FE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8E7F04F23817DC300081FE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8E7F055238279BC00081FE4 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				B8E7F04123817DBF00081FE4 /* AppDelegate.swift */,
 				B8E7F04323817DBF00081FE4 /* SceneDelegate.swift */,
 				B8E7F04523817DBF00081FE4 /* ContentView.swift */,
+				B8E7F055238279BC00081FE4 /* AboutView.swift */,
 				B8E7F04723817DC300081FE4 /* Assets.xcassets */,
 				B8E7F04C23817DC300081FE4 /* LaunchScreen.storyboard */,
 				B8E7F04F23817DC300081FE4 /* Info.plist */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8E7F056238279BC00081FE4 /* AboutView.swift in Sources */,
 				B8E7F04223817DBF00081FE4 /* AppDelegate.swift in Sources */,
 				B8E7F04423817DBF00081FE4 /* SceneDelegate.swift in Sources */,
 				B8E7F04623817DBF00081FE4 /* ContentView.swift in Sources */,
