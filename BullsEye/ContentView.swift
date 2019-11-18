@@ -10,8 +10,9 @@ import SwiftUI
 
 struct ContentView: View {
 
-  @State var alertIsVisible: Bool = false
-  @State var sliderValue: Double = 50.0
+  @State var alertIsVisible = false
+  @State var sliderValue = 50.0
+  @State var target = Int.random(in: 1...100)
  
   var body: some View {
     VStack {
@@ -20,14 +21,14 @@ struct ContentView: View {
       // Target row
       HStack {
         Text("Put the bullseye as close as you can to:")
-        Text(/*@START_MENU_TOKEN@*/"100"/*@END_MENU_TOKEN@*/)
+        Text("\(target)")
       }
       Spacer()
       
       // Slider row
       HStack {
         Text("1")
-        Slider(value: self.$sliderValue, in: 1...100)
+        Slider(value: $sliderValue, in: 1...100)
         Text("100")
       }
       Spacer()
@@ -40,8 +41,11 @@ struct ContentView: View {
         Text(/*@START_MENU_TOKEN@*/"Hit Me!"/*@END_MENU_TOKEN@*/)
       }
       .alert(isPresented: $alertIsVisible) { () -> Alert in
-        var roundedValue: Int = Int(self.sliderValue.rounded())
-        return Alert(title: Text("Hello there!"), message: Text("The slider's value is \(roundedValue)."), dismissButton: .default(Text("Awesome!")))
+        let roundedValue = Int(sliderValue.rounded())
+        return Alert(title: Text("Hello there!"), message: Text(
+          "The slider's value is \(roundedValue).\n" +
+          "You scored \(pointsForCurrentRound()) points this round."
+        ), dismissButton: .default(Text("Awesome!")))
       }
       Spacer()
       
@@ -64,10 +68,20 @@ struct ContentView: View {
       .padding(.bottom, 20)
     }
   }
+  
+  func pointsForCurrentRound() -> Int {
+    
+    let roundedValue = Int(sliderValue.rounded())
+    let difference = abs(target - roundedValue)
+    let awardedPoints = 100 - difference
+    return awardedPoints
+  }
+  
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView().previewLayout(.fixed(width: 896, height: 414))
-    }
+  static var previews: some View {
+    ContentView().previewLayout(.fixed(width: 896, height: 414))
+  }
 }
+
