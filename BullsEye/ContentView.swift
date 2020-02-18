@@ -44,6 +44,7 @@ struct ContentView: View {
         let roundedValue = Int(sliderValue.rounded())
         return Alert(title: Text("Hello there!"), message: Text(
           "The slider's value is \(roundedValue).\n" +
+            // Add the score next. Notice the + 
           "You scored \(pointsForCurrentRound()) points this round."
         ), dismissButton: .default(Text("Awesome!")))
       }
