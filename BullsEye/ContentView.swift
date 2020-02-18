@@ -11,10 +11,17 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Text("Welcome to UAG")
+            Text("Welcome to iOS Class")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(Color.red)
+            /*
+             Button(action: {
+                 // What to perform
+             }) {
+                 // How the button looks like
+             }
+             **/
             Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
                 Text("Hit me!")
             }
